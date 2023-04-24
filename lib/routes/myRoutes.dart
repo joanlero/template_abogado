@@ -1,14 +1,19 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:template_abogado/routes/routes.dart';
-import 'package:template_abogado/screeen/splash_screen/splash_screen.dart';
+import 'package:template_abogado/constants/bindings.dart';
+import 'package:template_abogado/routes/app_routes.dart';
+import 'package:template_abogado/screen/welcome/welcome_screen.dart';
+import '../screen/splash_screen/splash_screen.dart';
 
-class MyRoutes {
-  static final List<GetPage> page = [
+class AppPages {
+  static final List<GetPage> pages = [
     GetPage(
-        name: AppRoutes.SPLASHSCREEEN,
+        name: AppRoutes.INITIAL,
         page: () => SplashScreen(),
-        binding:
+        binding: SplashBinding()),
+    GetPage(
+        name: AppRoutes.WELCOME,
+        page: () => WelcomeScreen(),
+        binding: WelcomeBinding()
     ),
   ];
 }
